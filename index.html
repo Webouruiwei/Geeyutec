@@ -3,177 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loblich - Design Your Kitchen, Elevate Your Cooking</title>
-    <meta name="description" content="Loblich - Professional gas cooktop manufacturer, quality embedded gas stoves for global market.">
+    <title>Loblich - Technology with style | Gas Cooktop Manufacturer</title>
+    <meta name="description" content="Loblich - Professional gas cooktop manufacturer with style. Quality embedded gas stoves for kitchens around the world.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation - Smeg Style -->
+    <!-- Accessibility skip -->
+    <a href="#main" class="skip-link">Skip to Content</a>
+
+    <!-- Header - Navigation matching smeg.com -->
     <header class="header">
         <nav class="nav-container">
-            <div class="nav-logo">
-                <a href="/">Loblich</a>
+            <div class="nav-left">
+                <ul class="nav-main-menu">
+                    <li class="nav-item has-dropdown">
+                        <a href="/appliances/">Major Appliances</a>
+                        <ul class="dropdown">
+                            <li><a href="/appliances/gas-cooktops/">Gas Cooktops</a></li>
+                            <li><a href="/appliances/ovens/">Ovens</a></li>
+                            <li><a href="/appliances/refrigerators/">Refrigerators</a></li>
+                            <li><a href="/appliances/dishwashers/">Dishwashers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#">Small Appliances</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Coffee Machines</a></li>
+                            <li><a href="#">Kettles</a></li>
+                            <li><a href="#">Toasters</a></li>
+                            <li><a href="#">Food Processors</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="/special-projects/">Special Projects</a>
+                        <ul class="dropdown">
+                            <li><a href="/special-projects/custom-solutions/">Custom Solutions</a></li>
+                            <li><a href="/special-projects/oem-odm/">OEM/ODM Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="/aesthetic-lines/">Aesthetic Lines</a>
+                        <ul class="dropdown">
+                            <li><a href="/aesthetic-lines/musa/">Musa</a></li>
+                            <li><a href="/aesthetic-lines/isola/">Isola</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="/inspiration/">Inspiration</a>
+                        <ul class="dropdown">
+                            <li><a href="/inspiration/design-stories/">Design Stories</a></li>
+                            <li><a href="/inspiration/kitchen-ideas/">Kitchen Ideas</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item has-dropdown">
-                    <a href="#">Products</a>
-                    <ul class="dropdown">
-                        <li><a href="/products/2-burner.html">2 Burner Gas Cooktop</a></li>
-                        <li><a href="/products/4-burner.html">4 Burner Gas Cooktop</a></li>
-                        <li><a href="/products/5-burner.html">5 Burner Gas Cooktop</a></li>
-                        <li><a href="/products/custom.html">Custom Solutions</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#about">About</a></li>
-                <li class="nav-item"><a href="#news">News</a></li>
-                <li class="nav-item"><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-logo">
+                <a href="/">
+                    <span class="logo-text">Loblich</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <button class="search-toggle" aria-label="Search"></button>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <!-- Full Screen Hero - Smeg Style -->
-    <section class="hero-fullscreen">
-        <div class="hero-image">
-            <img src="images/hero.jpg" alt="Modern kitchen with Loblich gas cooktop" loading="lazy">
-            <div class="hero-overlay">
-                <div class="hero-content">
-                    <h1 class="hero-title">Loblich</h1>
-                    <p class="hero-subtitle">Design Your Kitchen, Elevate Your Cooking</p>
-                    <a href="#products" class="btn btn-light">Explore Our Products</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Categories - 2x2 Grid like Smeg -->
-    <section class="product-categories" id="products">
-        <div class="product-grid">
-            <!-- 2 Burner -->
-            <a href="/products/2-burner.html" class="product-category-card" id="2-burner">
-                <img src="images/2-burner.jpg" alt="2 Burner Gas Cooktop" loading="lazy">
-                <div class="category-overlay">
-                    <h3 class="category-title">2 Burner</h3>
-                    <p class="category-subtitle">Perfect for small kitchens & apartments</p>
-                </div>
-            </a>
-            <!-- 4 Burner -->
-            <a href="/products/4-burner.html" class="product-category-card" id="4-burner">
-                <img src="images/4-burner.jpg" alt="4 Burner Gas Cooktop" loading="lazy">
-                <div class="category-overlay">
-                    <h3 class="category-title">4 Burner</h3>
-                    <p class="category-subtitle">Ideal for family kitchens & everyday cooking</p>
-                </div>
-            </a>
-            <!-- 5 Burner -->
-            <a href="/products/5-burner.html" class="product-category-card" id="5-burner">
-                <img src="images/5-burner.jpg" alt="5 Burner Gas Cooktop" loading="lazy">
-                <div class="category-overlay">
-                    <h3 class="category-title">5 Burner</h3>
-                    <p class="category-subtitle">Professional grade for serious cooking</p>
-                </div>
-            </a>
-            <!-- Custom Solutions -->
-            <a href="/products/custom.html" class="product-category-card" id="custom">
-                <img src="images/custom.jpg" alt="Custom Gas Cooktop Solutions" loading="lazy">
-                <div class="category-overlay">
-                    <h3 class="category-title">Custom Solutions</h3>
-                    <p class="category-subtitle">OEM/ODM according to your requirements</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- About Brand Section -->
-    <section class="about-brand" id="about">
-        <div class="about-container">
-            <div class="about-content">
-                <h2>Our Story</h2>
-                <p>Loblich is a professional manufacturer of gas cooktops based in Foshan, China. With over 10 years of exporting experience, we deliver high-quality certified cooking appliances to kitchens around the world. Every cooktop is engineered for performance, safety, and timeless design that complements any modern kitchen.</p>
-                <p>We believe that great design meets great function — delivering efficient heat distribution, easy cleaning, and lasting durability that stands the test of time.</p>
-                <div class="about-buttons">
-                    <a href="#products" class="btn btn-outline">View Products</a>
-                    <a href="#contact" class="btn">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News / Blog Section -->
-    <section class="news-section" id="news">
-        <div class="news-container">
-            <h2 class="section-title">Latest News</h2>
-            <div class="news-grid">
-                <article class="news-card">
-                    <div class="news-image">
-                        <img src="images/news1.jpg" alt="Kitchen Design Trends 2026" loading="lazy">
+    <!-- Main Content - matching smeg.com full structure -->
+    <main id="main">
+        <!-- Hero Carousel Section - like smeg.com featured collections -->
+        <section class="hero-carousel">
+            <div class="carousel-slide active">
+                <div class="carousel-image">
+                    <img src="images/hero-gas-cooktop.jpg" alt="Loblich Gas Cooktops Collection" loading="lazy">
+                    <div class="carousel-overlay">
+                        <div class="carousel-content">
+                            <h2 class="carousel-tag">NEW AESTHETIC</h2>
+                            <h1 class="carousel-title">Professional Gas Cooktops</h1>
+                            <p class="carousel-desc">Designed for performance, engineered for life.</p>
+                            <a href="/appliances/gas-cooktops/" class="btn btn-light">Discover More</a>
+                        </div>
                     </div>
-                    <div class="news-content">
-                        <span class="news-date">April 15, 2026</span>
-                        <h3>Top 5 Kitchen Design Trends for 2026</h3>
-                        <p>Discover the latest trends in modern kitchen design and how gas cooktops fit into contemporary home aesthetics.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <div class="news-image">
-                        <img src="images/news2.jpg" alt="Choosing the Right Cooktop" loading="lazy">
-                    </div>
-                    <div class="news-content">
-                        <span class="news-date">April 8, 2026</span>
-                        <h3>How to Choose the Perfect Gas Cooktop for Your Kitchen</h3>
-                        <p>A complete guide to burner configuration, materials, and installation considerations for your new cooktop.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer - Black like Smeg -->
-    <footer class="footer" id="contact">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Loblich</h3>
-                <p>Professional gas cooktop manufacturer<br>for the global market.</p>
+        <!-- Category Sections - Major Appliances -->
+        <section class="category-section">
+            <div class="category-container">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/major-appliances.jpg" alt="Major Appliances" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <h3>Major Appliances</h3>
+                        <p>Premium quality gas cooktops, ovens, refrigerators and dishwashers for modern kitchens.</p>
+                        <a href="/appliances/" class="btn">Explore All</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/small-appliances.jpg" alt="Small Appliances" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <h3>Small Appliances</h3>
+                        <p>Coffee machines, kettles, toasters and more to complete your kitchen.</p>
+                        <a href="/small-appliances/" class="btn">Explore All</a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-column">
-                <h4>Products</h4>
-                <ul>
-                    <li><a href="#2-burner">2 Burner Gas Cooktop</a></li>
-                    <li><a href="#4-burner">4 Burner Gas Cooktop</a></li>
-                    <li><a href="#5-burner">5 Burner Gas Cooktop</a></li>
-                    <li><a href="#custom">Custom Solutions</a></li>
-                </ul>
+        </section>
+
+        <!-- Featured Collections Section -->
+        <section class="featured-section">
+            <div class="container">
+                <h2 class="section-title">Featured Collections</h2>
+                <div class="featured-grid">
+                    <div class="featured-item">
+                        <img src="images/2-burner.jpg" alt="2 Burner Gas Cooktop" loading="lazy">
+                        <div class="featured-content">
+                            <h3>2 Burner Gas Cooktop</h3>
+                            <p>Perfect for compact kitchens</p>
+                            <a href="/products/2-burner.html" class="btn-text">View →</a>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <img src="images/4-burner.jpg" alt="4 Burner Gas Cooktop" loading="lazy">
+                        <div class="featured-content">
+                            <h3>4 Burner Gas Cooktop</h3>
+                            <p>Ideal for family cooking</p>
+                            <a href="/products/4-burner.html" class="btn-text">View →</a>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <img src="images/5-burner.jpg" alt="5 Burner Gas Cooktop" loading="lazy">
+                        <div class="featured-content">
+                            <h3>5 Burner Gas Cooktop</h3>
+                            <p>Professional grade for passionate chefs</p>
+                            <a href="/products/5-burner.html" class="btn-text">View →</a>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <img src="images/custom-solutions.jpg" alt="Custom Solutions" loading="lazy">
+                        <div class="featured-content">
+                            <h3>Custom Solutions</h3>
+                            <p>OEM/ODM according to your specifications</p>
+                            <a href="/products/custom.html" class="btn-text">View →</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-column">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Certifications</a></li>
-                </ul>
+        </section>
+
+        <!-- Aesthetic Lines Section -->
+        <section class="aesthetic-section">
+            <div class="container">
+                <h2 class="section-title">Aesthetic Lines</h2>
+                <div class="aesthetic-grid">
+                    <div class="aesthetic-item">
+                        <img src="images/aesthetic-musa.jpg" alt="Musa Collection" loading="lazy">
+                        <div class="aesthetic-content">
+                            <h3>Musa Collection</h3>
+                            <p>Refined balance of geometry, glossy and matte interplay.</p>
+                            <a href="/aesthetic-lines/musa/" class="btn-outline">Discover</a>
+                        </div>
+                    </div>
+                    <div class="aesthetic-item">
+                        <img src="images/aesthetic-isola.jpg" alt="Isola Collection" loading="lazy">
+                        <div class="aesthetic-content">
+                            <h3>Isola Collection</h3>
+                            <p>Born from the vision of Stefano Boeri Interiors.</p>
+                            <a href="/aesthetic-lines/isola/" class="btn-outline">Discover</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-column">
-                <h4>Contact Info</h4>
-                <ul class="contact-info">
-                    <li>Foshan Geeyu Technology Co., Ltd.</li>
-                    <li>Guangdong, China</li>
-                    <li>Email: info@loblich.com</li>
-                    <li>Phone/WhatsApp: +86 13533126309</li>
-                </ul>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="news-section-home">
+            <div class="container">
+                <h2 class="section-title">Latest News</h2>
+                <div class="news-grid-home">
+                    <article class="news-card-home">
+                        <div class="news-image">
+                            <img src="images/news-1.jpg" alt="Loblich Receives Design Award 2026" loading="lazy">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">April 2026</span>
+                            <h3>Loblich Receives International Design Award 2026</h3>
+                            <a href="/news/design-award-2026.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                    <article class="news-card-home">
+                        <div class="news-image">
+                            <img src="images/news-2.jpg" alt="Expanding Global Distribution" loading="lazy">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">March 2026</span>
+                            <h3>Strengthening International Distribution Network</h3>
+                            <a href="/news/global-expansion-2026.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="news-more">
+                    <a href="/news/" class="btn">View All News</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Units Section - matching smeg.com -->
+        <section class="business-section">
+            <div class="container">
+                <h2 class="section-title">Loblich Business Units</h2>
+                <div class="business-grid">
+                    <div class="business-card">
+                        <div class="business-image">
+                            <img src="images/business-pro.jpg" alt="Loblich Professional" loading="lazy">
+                        </div>
+                        <div class="business-content">
+                            <h3>Loblich Professional</h3>
+                            <p>Designed exclusively for commercial kitchens, restaurants and hospitality. Solid, functional products built to last.</p>
+                            <a href="/professional/" class="btn-outline">Discover</a>
+                        </div>
+                    </div>
+                    <div class="business-card">
+                        <div class="business-image">
+                            <img src="images/business-custom.jpg" alt="Custom Solutions" loading="lazy">
+                        </div>
+                        <div class="business-content">
+                            <h3>Custom Solutions</h3>
+                            <p>Over 10 years of experience delivering OEM/ODM solutions for global brands.</p>
+                            <a href="/custom-solutions/" class="btn-outline">Discover</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - exactly like smeg.com structure -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>About Loblich</h4>
+                    <ul>
+                        <li><a href="/company/about-us/">The Loblich Group</a></li>
+                        <li><a href="/company/sustainability/">Sustainability</a></li>
+                        <li><a href="/news/">News</a></li>
+                        <li><a href="/contacts/">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="/products/2-burner.html">2 Burner Gas Cooktops</a></li>
+                        <li><a href="/products/4-burner.html">4 Burner Gas Cooktops</a></li>
+                        <li><a href="/products/5-burner.html">5 Burner Gas Cooktops</a></li>
+                        <li><a href="/custom-solutions/">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="/contacts/">Find Your Local Dealer</a></li>
+                        <li><a href="/support/">Product Support</a></li>
+                        <li><a href="/warranty/">Warranty Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/loblich" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/loblich" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/loblich" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/loblich" target="_blank" rel="noopener">YouTube</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Loblich. All rights reserved.</p>
+            <div class="footer-container">
+                <div class="footer-legal">
+                    <a href="/cookie-policy/">Cookie Policy</a> |
+                    <a href="/legal/">Legal</a> |
+                    <a href="/privacy-policy/">Privacy Policy</a> |
+                    <a href="/contacts/">Manufacturer Contacts</a>
+                </div>
+                <p>&copy; 2026 Loblich. All rights reserved.</p>
+                <p>Foshan Geeyu Technology Co., Ltd. - Guangdong, China</p>
+                <p>Phone/WhatsApp: +86 13533126309 | Email: info@loblich.com</p>
+            </div>
         </div>
     </footer>
 

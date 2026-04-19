@@ -436,6 +436,484 @@ a:hover {
 }
 
 /* ============================================
+   Skip link accessibility
+   ============================================ */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 8px 16px;
+    z-index: 1001;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ============================================
+   Full site navigation - matching smeg.com
+   ============================================ */
+
+.nav-left .nav-main-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-left .nav-main-menu .nav-item > a {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-black);
+    opacity: 0.8;
+}
+
+.nav-logo .logo-text {
+    font-size: 26px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-toggle {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.search-toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--color-black);
+    border-radius: 50%;
+}
+
+.search-toggle::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 8px;
+    height: 2px;
+    background-color: var(--color-black);
+    transform: rotate(-45deg);
+}
+
+/* ============================================
+   Hero Carousel - matching smeg.com
+   ============================================ */
+
+.hero-carousel {
+    width: 100%;
+    margin-top: 80px;
+    position: relative;
+}
+
+.carousel-slide {
+    width: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    max-height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 80px 60px;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    color: var(--color-white);
+}
+
+.carousel-content {
+    max-width: 600px;
+}
+
+.carousel-tag {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.carousel-title {
+    font-size: 42px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.carousel-desc {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Category Section - two cards like smeg.com
+   ============================================ */
+
+.category-section {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+}
+
+.category-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card .category-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.category-card .category-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.05);
+}
+
+.category-card .category-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    color: var(--color-white);
+}
+
+.category-card h3 {
+    font-size: 28px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Featured Collection Grid
+   ============================================ */
+
+.featured-section {
+    padding: 80px 20px;
+    background-color: var(--color-gray-light);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.featured-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-white);
+}
+
+.featured-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.featured-item:hover img {
+    transform: scale(1.03);
+}
+
+.featured-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    color: var(--color-white);
+}
+
+.featured-content h3 {
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.featured-content p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    opacity: 0.85;
+}
+
+.btn-text {
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+.btn-text:hover {
+    opacity: 1;
+}
+
+/* ============================================
+   Aesthetic Lines Section
+   ============================================ */
+
+.aesthetic-section {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+}
+
+.aesthetic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.aesthetic-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.aesthetic-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.aesthetic-item:hover img {
+    transform: scale(1.05);
+}
+
+.aesthetic-content {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: var(--color-white);
+}
+
+.aesthetic-content h3 {
+    font-size: 28px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.aesthetic-content p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Latest News Section on Homepage
+   ============================================ */
+
+.news-section-home {
+    padding: 80px 20px;
+    background-color: var(--color-gray-light);
+}
+
+.news-grid-home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.news-card-home {
+    background-color: var(--color-white);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.news-card-home:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.news-card-home .news-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.news-card-home .news-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.news-card-home .news-content {
+    padding: 25px 30px;
+}
+
+.news-card-home .news-date {
+    font-size: 12px;
+    color: var(--color-gray);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.news-card-home h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--color-black);
+}
+
+.news-more {
+    text-align: center;
+}
+
+/* ============================================
+   Business Units Section
+   ============================================ */
+
+.business-section {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.business-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.business-card .business-image {
+    width: 100%;
+}
+
+.business-card .business-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.business-card:hover .business-image img {
+    transform: scale(1.05);
+}
+
+.business-card .business-content {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: var(--color-white);
+}
+
+.business-card h3 {
+    font-size: 28px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.business-card p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Footer Social Links
+   ============================================ */
+
+.social-links li {
+    margin-bottom: 12px;
+}
+
+.footer-legal {
+    margin-bottom: 15px;
+}
+
+.footer-legal a {
+    color: #999;
+    font-size: 12px;
+    margin: 0 8px;
+}
+
+.footer-legal a:hover {
+    color: var(--color-white);
+}
+
+/* ============================================
    Product Page Styles
    ============================================ */
 
