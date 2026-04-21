@@ -621,7 +621,7 @@ a:hover {
     font-weight: 200;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .nav-right {
@@ -646,7 +646,7 @@ a:hover {
     left: 0;
     width: 14px;
     height: 14px;
-    border: 2px solid var(--color-black);
+    border: 2px solid var(--color-white);
     border-radius: 50%;
 }
 
@@ -657,7 +657,7 @@ a:hover {
     right: 1px;
     width: 8px;
     height: 2px;
-    background-color: var(--color-black);
+    background-color: var(--color-white);
     transform: rotate(-45deg);
 }
 
