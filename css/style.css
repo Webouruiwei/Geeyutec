@@ -46,71 +46,24 @@ a:hover {
 }
 
 /* ============================================
-   Top Bar - matching smeg.com
-   ============================================ */
-
-.top-bar {
-    background-color: #000000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    height: 36px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-}
-
-.top-bar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-.top-bar-left,
-.top-bar-right {
-    display: flex;
-    gap: 30px;
-}
-
-.top-bar a {
-    color: #ffffff !important;
-    opacity: 0.9;
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.top-bar a:hover {
-    color: #D32F2F !important;
-    opacity: 1;
-}
-
-/* ============================================
    Navigation
    ============================================ */
 
 .header {
-    background-color: #000000 !important;
+    background-color: var(--color-white);
     position: fixed;
-    top: 36px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 80px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 40px;
@@ -121,7 +74,7 @@ a:hover {
     font-weight: 200;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #ffffff !important;
+    color: var(--color-black);
 }
 
 .nav-menu {
@@ -140,13 +93,12 @@ a:hover {
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #ffffff !important;
-    opacity: 0.85;
+    color: var(--color-black);
+    opacity: 0.8;
 }
 
 .nav-item > a:hover {
     opacity: 1;
-    color: #D32F2F !important; /* Smeg signature red */
 }
 
 /* Dropdown */
@@ -154,7 +106,7 @@ a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     min-width: 220px;
     padding: 10px 0;
     box-shadow: var(--shadow-md);
@@ -193,105 +145,9 @@ a:hover {
 .mobile-toggle span {
     width: 25px;
     height: 2px;
-    background-color: #ffffff !important;
+    background-color: var(--color-black);
     margin: 3px 0;
     transition: var(--transition);
-}
-
-/* ============================================
-   Expandable Search Bar
-   ============================================ */
-
-.search-toggle {
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    position: relative;
-}
-
-.search-toggle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 14px;
-    height: 14px;
-    border: 2px solid #ffffff !important;
-    border-radius: 50%;
-}
-
-.search-toggle::after {
-    content: "";
-    position: absolute;
-    bottom: 1px;
-    right: 1px;
-    width: 8px;
-    height: 2px;
-    background-color: #ffffff !important;
-    transform: rotate(-45deg);
-}
-
-/* Search Bar */
-.search-bar {
-    background-color: #000000;
-    position: fixed;
-    top: 106px; /* 36px top-bar + 70px navbar = 106px */
-    left: 0;
-    right: 0;
-    z-index: 999;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: none; /* Hidden by default */
-}
-
-.search-bar.active {
-    display: block;
-}
-
-.search-bar-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-.search-input {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.search-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.search-input:focus {
-    outline: none;
-    border-color: #D32F2F;
-}
-
-.search-close {
-    background: transparent;
-    border: none;
-    color: #ffffff;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 5px;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-}
-
-.search-close:hover {
-    opacity: 1;
-    color: #D32F2F;
 }
 
 /* ============================================
@@ -300,8 +156,8 @@ a:hover {
 
 .hero-fullscreen {
     width: 100%;
-    height: calc(100vh - 106px);
-    margin-top: 106px;
+    height: calc(100vh - 80px);
+    margin-top: 80px;
     position: relative;
     overflow: hidden;
 }
@@ -580,591 +436,27 @@ a:hover {
 }
 
 /* ============================================
-   Skip link accessibility
-   ============================================ */
-
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--color-black);
-    color: var(--color-white);
-    padding: 8px 16px;
-    z-index: 1001;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
-/* ============================================
-   Full site navigation - matching smeg.com
-   ============================================ */
-
-.nav-left .nav-main-menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-left .nav-main-menu .nav-item > a {
-    font-size: 13px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--color-black);
-    opacity: 0.8;
-}
-
-.nav-logo .logo-text {
-    font-size: 26px;
-    font-weight: 200;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--color-white);
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.search-toggle {
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    position: relative;
-}
-
-.search-toggle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 14px;
-    height: 14px;
-    border: 2px solid var(--color-white);
-    border-radius: 50%;
-}
-
-.search-toggle::after {
-    content: "";
-    position: absolute;
-    bottom: 1px;
-    right: 1px;
-    width: 8px;
-    height: 2px;
-    background-color: var(--color-white);
-    transform: rotate(-45deg);
-}
-
-/* ============================================
-   Hero Carousel - matching smeg.com
-   ============================================ */
-
-.hero-carousel {
-    width: 100%;
-    margin-top: 106px;
-    position: relative;
-}
-
-.carousel-slide {
-    width: 100%;
-}
-
-.carousel-image {
-    width: 100%;
-    max-height: calc(100vh - 80px);
-    overflow: hidden;
-}
-
-.carousel-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.carousel-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 80px 60px;
-    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
-    color: var(--color-white);
-}
-
-.carousel-content {
-    max-width: 600px;
-}
-
-.carousel-tag {
-    font-size: 14px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    opacity: 0.9;
-}
-
-.carousel-title {
-    font-size: 42px;
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-.carousel-desc {
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-/* ============================================
-   Category Section - two cards like smeg.com
-   ============================================ */
-
-.category-section {
-    padding: 80px 20px;
-    background-color: var(--color-white);
-}
-
-.category-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-.category-card {
-    position: relative;
-    overflow: hidden;
-}
-
-.category-card .category-image {
-    width: 100%;
-    overflow: hidden;
-}
-
-.category-card .category-image img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.category-card:hover .category-image img {
-    transform: scale(1.05);
-}
-
-.category-card .category-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
-    color: var(--color-white);
-}
-
-.category-card h3 {
-    font-size: 28px;
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.category-card p {
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-
-/* ============================================
-   Featured Collection Grid
-   ============================================ */
-
-.featured-section {
-    padding: 80px 20px;
-    background-color: var(--color-gray-light);
-}
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.featured-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-.featured-item {
-    position: relative;
-    overflow: hidden;
-    background-color: var(--color-white);
-}
-
-.featured-item img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.featured-item:hover img {
-    transform: scale(1.03);
-}
-
-.featured-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
-    color: var(--color-white);
-}
-
-.featured-content h3 {
-    font-size: 20px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-}
-
-.featured-content p {
-    font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    opacity: 0.85;
-}
-
-.btn-text {
-    color: var(--color-white);
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    opacity: 0.9;
-}
-
-.btn-text:hover {
-    opacity: 1;
-}
-
-/* ============================================
-   Aesthetic Lines Section
-   ============================================ */
-
-.aesthetic-section {
-    padding: 80px 20px;
-    background-color: var(--color-white);
-}
-
-.aesthetic-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-.aesthetic-item {
-    position: relative;
-    overflow: hidden;
-}
-
-.aesthetic-item img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.aesthetic-item:hover img {
-    transform: scale(1.05);
-}
-
-.aesthetic-content {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    color: var(--color-white);
-}
-
-.aesthetic-content h3 {
-    font-size: 28px;
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.aesthetic-content p {
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-
-/* ============================================
-   Latest News Section on Homepage
-   ============================================ */
-
-.news-section-home {
-    padding: 80px 20px;
-    background-color: var(--color-gray-light);
-}
-
-.news-grid-home {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.news-card-home {
-    background-color: var(--color-white);
-    overflow: hidden;
-    transition: var(--transition);
-}
-
-.news-card-home:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-5px);
-}
-
-.news-card-home .news-image {
-    width: 100%;
-    overflow: hidden;
-}
-
-.news-card-home .news-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-}
-
-.news-card-home .news-content {
-    padding: 25px 30px;
-}
-
-.news-card-home .news-date {
-    font-size: 12px;
-    color: var(--color-gray);
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.news-card-home h3 {
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 15px;
-    color: var(--color-black);
-}
-
-.news-more {
-    text-align: center;
-}
-
-/* ============================================
-   Business Units Section
-   ============================================ */
-
-.business-section {
-    padding: 80px 20px;
-    background-color: var(--color-white);
-}
-
-.business-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-.business-card {
-    position: relative;
-    overflow: hidden;
-}
-
-.business-card .business-image {
-    width: 100%;
-}
-
-.business-card .business-image img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.business-card:hover .business-image img {
-    transform: scale(1.05);
-}
-
-.business-card .business-content {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    color: var(--color-white);
-}
-
-.business-card h3 {
-    font-size: 28px;
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.business-card p {
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-
-/* ============================================
-   Footer Social Links
-   ============================================ */
-
-.social-links li {
-    margin-bottom: 12px;
-}
-
-.footer-legal {
-    margin-bottom: 15px;
-}
-
-.footer-legal a {
-    color: #999;
-    font-size: 12px;
-    margin: 0 8px;
-}
-
-.footer-legal a:hover {
-    color: var(--color-white);
-}
-
-/* ============================================
-   Product Page Styles
-   ============================================ */
-
-.product-hero {
-    width: 100%;
-    margin-top: 106px;
-}
-
-.product-hero-image {
-    width: 100%;
-    max-height: 70vh;
-    overflow: hidden;
-}
-
-.product-hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.product-info {
-    padding: 80px 20px;
-    background-color: var(--color-white);
-}
-
-.product-info-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.product-info-text h1 {
-    font-size: 42px;
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    color: var(--color-black);
-}
-
-.product-subtitle {
-    font-size: 18px;
-    color: var(--color-gray);
-    font-weight: 300;
-    margin-bottom: 30px;
-    letter-spacing: 0.5px;
-}
-
-.product-description {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--color-gray-dark);
-    margin-bottom: 40px;
-    font-weight: 300;
-}
-
-.product-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.feature-item h4 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 15px;
-    color: var(--color-black);
-}
-
-.feature-item ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.feature-item li {
-    font-size: 15px;
-    color: var(--color-gray);
-    margin-bottom: 8px;
-    font-weight: 300;
-}
-
-/* ============================================
-   Footer - Black like Smeg
+   Footer - 1:1 matching smeg.com layout
    ============================================ */
 
 .footer {
     background-color: var(--color-black);
-    padding: 60px 40px 30px;
+    padding: 40px 40px 30px;
     color: var(--color-white);
 }
 
 .footer-container {
     max-width: 1400px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
 }
 
-.footer-column h3 {
-    color: var(--color-white);
-    font-size: 20px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
+/* Top section: three columns exactly like smeg.com */
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: start;
 }
 
 .footer-column h4 {
@@ -1173,80 +465,131 @@ a:hover {
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 25px;
-}
-
-.footer-column p,
-.footer-column li,
-.footer-column a {
-    color: #999999;
-    font-size: 13px;
-    line-height: 1.8;
-    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-column ul li {
     margin-bottom: 12px;
 }
 
-.footer-column a:hover {
+.footer-column ul li a {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-column ul li span.footer-contact-phone {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.footer-column ul li a:hover {
     color: var(--color-white);
 }
 
-.contact-info li {
-    margin-bottom: 8px;
+.footer-column ul li span {
+    color: #999999;
+    font-size: 13px;
+    padding: 0 8px;
 }
 
+/* Bottom section: legal links + company info exactly like smeg.com */
 .footer-bottom {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-top: 30px;
     border-top: 1px solid #333333;
-    text-align: center;
-    color: #666666;
+    padding-top: 25px;
+}
+
+.footer-legal {
+    margin-bottom: 20px;
+}
+
+.footer-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.footer-legal-links li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-legal-links li a {
+    color: #999999;
+    transition: all 0.3s ease;
     font-size: 12px;
     font-weight: 300;
+    text-decoration: none;
+}
+
+.footer-legal-links li a:hover {
+    color: var(--color-white);
+}
+
+.footer-legal-links li span {
+    color: #999999;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.footer-company-info {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.footer-company-info p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.footer-company-info .copyright {
+    margin-top: 10px;
+    color: #666666;
+    font-size: 12px;
 }
 
 /* ============================================
    Responsive - Mobile
    ============================================ */
 
+@media (max-width: 1200px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
 @media (max-width: 992px) {
-    .top-bar {
-        display: none;
-    }
-
-    .header {
-        top: 0;
-    }
-
-    .hero-carousel {
-        margin-top: 70px;
-    }
-
     .nav-container {
         padding: 0 20px;
     }
 
     .nav-menu {
         position: absolute;
-        top: 70px;
+        top: 80px;
         left: -100%;
         width: 100%;
-        background-color: #000000;
+        background-color: var(--color-white);
         flex-direction: column;
         padding: 20px 0;
         transition: var(--transition);
         box-shadow: var(--shadow-md);
-    }
-
-    .nav-menu a {
-        color: #ffffff;
     }
 
     .nav-menu.active {
@@ -1288,10 +631,45 @@ a:hover {
     .category-title {
         font-size: 20px;
     }
+}
 
-    .footer-container {
+@media (max-width: 768px) {
+    .hero-fullscreen {
+        height: 70vh;
+    }
+
+    .news-image img {
+        height: 250px;
+    }
+
+    .about-brand {
+        padding: 50px 20px;
+    }
+
+    .news-section {
+        padding: 50px 20px;
+    }
+
+    .footer {
+        padding: 30px 20px 20px;
+    }
+
+    .footer-top {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .footer-legal-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-legal-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-legal-links li span {
+        display: none;
     }
 }
 
@@ -1314,5 +692,90 @@ a:hover {
 
     .footer {
         padding: 40px 20px 20px;
+    }
+}
+
+/* ============================================
+   Business Units Section - exactly like smeg.com
+   ============================================ */
+
+.business-units-section {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+}
+
+.business-units-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.business-units-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.business-unit-card {
+    background-color: var(--color-gray-light);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.business-unit-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.business-unit-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.business-unit-image img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.business-unit-content {
+    padding: 30px;
+}
+
+.business-unit-content h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--color-black);
+}
+
+.business-unit-content p {
+    font-size: 15px;
+    color: var(--color-gray);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.business-unit-content .read-more {
+    font-size: 14px;
+    color: var(--color-black);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .business-units-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .business-unit-image img {
+        height: 250px;
+    }
+    
+    .business-units-section {
+        padding: 50px 20px;
     }
 }

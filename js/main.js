@@ -22,30 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Search box toggle
-    const searchToggle = document.getElementById('searchToggle');
-    const searchBar = document.getElementById('searchBar');
-    const searchClose = document.getElementById('searchClose');
-
-    if (searchToggle && searchBar) {
-        searchToggle.addEventListener('click', function() {
-            searchBar.classList.toggle('active');
-        });
-
-        if (searchClose) {
-            searchClose.addEventListener('click', function() {
-                searchBar.classList.remove('active');
-            });
-        }
-
-        // Close search when clicking outside
-        searchBar.addEventListener('click', function(e) {
-            if (e.target === searchBar) {
-                searchBar.classList.remove('active');
-            }
-        });
-    }
-
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
