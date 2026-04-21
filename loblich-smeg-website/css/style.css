@@ -436,31 +436,36 @@ a:hover {
 }
 
 /* ============================================
-   Footer - Black like Smeg
+   Footer - 1:1 matching smeg.com layout
    ============================================ */
 
 .footer {
     background-color: var(--color-black);
-    padding: 60px 40px 30px;
+    padding: 40px 40px 30px;
     color: var(--color-white);
 }
 
 .footer-container {
     max-width: 1400px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
 }
 
-.footer-column h3 {
+/* Top section: Logo + 4 columns exactly like smeg.com */
+.footer-top {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+.footer-logo h3 {
     color: var(--color-white);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin: 0;
 }
 
 .footer-column h4 {
@@ -469,48 +474,112 @@ a:hover {
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 25px;
-}
-
-.footer-column p,
-.footer-column li,
-.footer-column a {
-    color: #999999;
-    font-size: 13px;
-    line-height: 1.8;
-    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-column ul li {
     margin-bottom: 12px;
 }
 
-.footer-column a:hover {
+.footer-column ul li a {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-column ul li a:hover {
     color: var(--color-white);
 }
 
-.contact-info li {
-    margin-bottom: 8px;
+.footer-column ul li span {
+    color: #999999;
+    font-size: 13px;
+    padding: 0 8px;
 }
 
+/* Bottom section: legal links + company info exactly like smeg.com */
 .footer-bottom {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-top: 30px;
     border-top: 1px solid #333333;
-    text-align: center;
-    color: #666666;
+    padding-top: 25px;
+}
+
+.footer-legal {
+    margin-bottom: 20px;
+}
+
+.footer-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.footer-legal-links li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-legal-links li a {
+    color: #999999;
+    transition: all 0.3s ease;
     font-size: 12px;
     font-weight: 300;
+    text-decoration: none;
+}
+
+.footer-legal-links li a:hover {
+    color: var(--color-white);
+}
+
+.footer-legal-links li span {
+    color: #999999;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.footer-company-info {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.footer-company-info p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.footer-company-info .copyright {
+    margin-top: 10px;
+    color: #666666;
+    font-size: 12px;
 }
 
 /* ============================================
    Responsive - Mobile
    ============================================ */
+
+@media (max-width: 1200px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .footer-logo {
+        grid-column: 1 / -1;
+    }
+}
 
 @media (max-width: 992px) {
     .nav-container {
@@ -568,10 +637,45 @@ a:hover {
     .category-title {
         font-size: 20px;
     }
+}
 
-    .footer-container {
+@media (max-width: 768px) {
+    .hero-fullscreen {
+        height: 70vh;
+    }
+
+    .news-image img {
+        height: 250px;
+    }
+
+    .about-brand {
+        padding: 50px 20px;
+    }
+
+    .news-section {
+        padding: 50px 20px;
+    }
+
+    .footer {
+        padding: 30px 20px 20px;
+    }
+
+    .footer-top {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .footer-legal-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-legal-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-legal-links li span {
+        display: none;
     }
 }
 
