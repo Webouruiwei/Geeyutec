@@ -450,22 +450,13 @@ a:hover {
     margin: 0 auto;
 }
 
-/* Top section: Logo + 4 columns exactly like smeg.com */
+/* Top section: three columns exactly like smeg.com */
 .footer-top {
     display: grid;
-    grid-template-columns: 200px 1fr 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
     margin-bottom: 40px;
     align-items: start;
-}
-
-.footer-logo h3 {
-    color: var(--color-white);
-    font-size: 24px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 0;
 }
 
 .footer-column h4 {
@@ -494,6 +485,13 @@ a:hover {
     text-transform: none;
     letter-spacing: 0.3px;
     text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-column ul li span.footer-contact-phone {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 300;
     line-height: 1.6;
 }
 
@@ -574,10 +572,6 @@ a:hover {
     .footer-top {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
-    }
-    
-    .footer-logo {
-        grid-column: 1 / -1;
     }
 }
 
