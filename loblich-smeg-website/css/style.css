@@ -700,3 +700,88 @@ a:hover {
         padding: 40px 20px 20px;
     }
 }
+
+/* ============================================
+   Business Units Section - exactly like smeg.com
+   ============================================ */
+
+.business-units-section {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+}
+
+.business-units-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.business-units-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.business-unit-card {
+    background-color: var(--color-gray-light);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.business-unit-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.business-unit-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.business-unit-image img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.business-unit-content {
+    padding: 30px;
+}
+
+.business-unit-content h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--color-black);
+}
+
+.business-unit-content p {
+    font-size: 15px;
+    color: var(--color-gray);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.business-unit-content .read-more {
+    font-size: 14px;
+    color: var(--color-black);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .business-units-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .business-unit-image img {
+        height: 250px;
+    }
+    
+    .business-units-section {
+        padding: 50px 20px;
+    }
+}
