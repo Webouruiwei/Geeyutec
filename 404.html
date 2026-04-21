@@ -4,28 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loblich - Technology with style</title>
-    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <!-- Script to handle 404 redirect for SPA on GitHub Pages -->
-    <script>
-        // GitHub Pages 404 redirect script for single-page navigation
-        // Based on: https://github.com/rafgraph/spa-github-pages
-        (function() {
-            var segmentCount = 1;
-            var l = window.location;
-            var url = l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") + l.pathname.replace(/^\/([^\/]*).*$/, "$1").replace(/\/$/, "") + "/#" + l.pathname + l.search;
-            if (l.pathname !== "" && segmentCount === 0) {
-                url = l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") + "/#" + l.pathname + l.search;
-            }
-            window.location.replace(url);
-        })();
-    </script>
-
-    <!-- Fallback content if script doesn't run -->
+    <!-- With .htaccess mod_rewrite, this 404.html is rarely used -->
+    <!-- Apache will handle the rewrite before reaching this -->
     <div style="max-width: 800px; margin: 100px auto; padding: 40px; text-align: center;">
-        <h1 style="font-size: 48px; margin-bottom: 20px;">Redirecting...</h1>
-        <p style="font-size: 18px; margin-bottom: 40px;">You will be redirected to the correct page shortly.</p>
+        <h1 style="font-size: 48px; margin-bottom: 20px;">Page Not Found</h1>
+        <p style="font-size: 18px; margin-bottom: 40px;">We couldn't find the page you're looking for.</p>
         <a href="/" style="display: inline-block; padding: 12px 24px; background-color: #000; color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;">Go to Homepage</a>
     </div>
 </body>

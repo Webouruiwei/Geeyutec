@@ -1,6 +1,14 @@
-# Enable clean URLs for GitHub Pages
-# All 404s go to index.html (for SPA) - but we use physical files here
-# This file helps with clean URLs
+# Enable clean URLs for SPA (no hash)
+# Redirect all non-existing paths to index.html for client-side routing
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
 
 # Enable Gzip compression
 <IfModule mod_deflate.c>
