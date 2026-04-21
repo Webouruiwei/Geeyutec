@@ -46,24 +46,70 @@ a:hover {
 }
 
 /* ============================================
-   Navigation
+   Top Bar - matching smeg.com
    ============================================ */
 
-.header {
-    background-color: var(--color-white);
+.top-bar {
+    background-color: #000000;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1001;
+    height: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    gap: 30px;
+}
+
+.top-bar a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.top-bar a:hover {
+    color: #ffffff;
+    opacity: 1;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+
+.header {
+    background-color: #000000;
+    position: fixed;
+    top: 36px;
+    left: 0;
+    right: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 70px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 40px;
@@ -74,7 +120,7 @@ a:hover {
     font-weight: 200;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--color-black);
+    color: #ffffff;
 }
 
 .nav-menu {
@@ -93,12 +139,13 @@ a:hover {
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-black);
+    color: #ffffff;
     opacity: 0.8;
 }
 
 .nav-item > a:hover {
     opacity: 1;
+    color: #D32F2F; /* Smeg signature red */
 }
 
 /* Dropdown */
@@ -106,7 +153,7 @@ a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--color-white);
+    background-color: #ffffff;
     min-width: 220px;
     padding: 10px 0;
     box-shadow: var(--shadow-md);
@@ -145,9 +192,105 @@ a:hover {
 .mobile-toggle span {
     width: 25px;
     height: 2px;
-    background-color: var(--color-black);
+    background-color: #ffffff;
     margin: 3px 0;
     transition: var(--transition);
+}
+
+/* ============================================
+   Expandable Search Bar
+   ============================================ */
+
+.search-toggle {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.search-toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+.search-toggle::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 8px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: rotate(-45deg);
+}
+
+/* Search Bar */
+.search-bar {
+    background-color: #000000;
+    position: fixed;
+    top: 106px; /* 36px top-bar + 70px navbar = 106px */
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: none; /* Hidden by default */
+}
+
+.search-bar.active {
+    display: block;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.search-input {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #D32F2F;
+}
+
+.search-close {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.search-close:hover {
+    opacity: 1;
+    color: #D32F2F;
 }
 
 /* ============================================
@@ -156,8 +299,8 @@ a:hover {
 
 .hero-fullscreen {
     width: 100%;
-    height: calc(100vh - 80px);
-    margin-top: 80px;
+    height: calc(100vh - 106px);
+    margin-top: 106px;
     position: relative;
     overflow: hidden;
 }
@@ -523,7 +666,7 @@ a:hover {
 
 .hero-carousel {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 106px;
     position: relative;
 }
 
@@ -919,7 +1062,7 @@ a:hover {
 
 .product-hero {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 106px;
 }
 
 .product-hero-image {
@@ -1073,20 +1216,36 @@ a:hover {
    ============================================ */
 
 @media (max-width: 992px) {
+    .top-bar {
+        display: none;
+    }
+
+    .header {
+        top: 0;
+    }
+
+    .hero-carousel {
+        margin-top: 70px;
+    }
+
     .nav-container {
         padding: 0 20px;
     }
 
     .nav-menu {
         position: absolute;
-        top: 80px;
+        top: 70px;
         left: -100%;
         width: 100%;
-        background-color: var(--color-white);
+        background-color: #000000;
         flex-direction: column;
         padding: 20px 0;
         transition: var(--transition);
         box-shadow: var(--shadow-md);
+    }
+
+    .nav-menu a {
+        color: #ffffff;
     }
 
     .nav-menu.active {
