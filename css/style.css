@@ -697,9 +697,17 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-    .news-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .news-carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .news-carousel-prev {
+        left: 10px;
+    }
+
+    .news-carousel-next {
+        right: 10px;
     }
 
     .category-title {
