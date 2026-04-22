@@ -392,7 +392,7 @@ a:hover {
     background-color: var(--color-white);
     overflow: hidden;
     transition: var(--transition);
-    max-width: 100%;
+    max-width: 350px;
 }
 
 .news-card:hover {
