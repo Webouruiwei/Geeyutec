@@ -1,0 +1,6 @@
+Product: Timeless 4-Burner Built-in Gas Cooktop
+Keyword: 4 burner built-in gas cooktop
+Processing: remove watermark, remove LOGO, remove text, remove brand identification
+Aspect Ratio: 4:5
+Format: webp
+Generated at: 2026-04-23T13:09:11.160466
