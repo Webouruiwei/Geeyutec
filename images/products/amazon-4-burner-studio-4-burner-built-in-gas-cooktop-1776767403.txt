@@ -1,6 +1,0 @@
-Product: Studio 4-Burner Built-in Gas Cooktop
-Keyword: 4 burner gas cooktop
-Processing: remove watermark, remove LOGO, remove text, remove brand identification
-Aspect Ratio: 4:5
-Format: webp
-Generated at: 2026-04-21T18:30:03.483961

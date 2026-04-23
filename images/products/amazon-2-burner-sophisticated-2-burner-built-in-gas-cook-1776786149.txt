@@ -1,6 +1,0 @@
-Product: Sophisticated 2-Burner Built-in Gas Cooktop
-Keyword: 2 burner gas cooktop
-Processing: remove watermark, remove LOGO, remove text, remove brand identification
-Aspect Ratio: 4:5
-Format: webp
-Generated at: 2026-04-21T23:42:29.353217

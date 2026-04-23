@@ -1,6 +1,0 @@
-Product: Premium 5-Burner Built-in Gas Cooktop
-Keyword: 5 burner gas cooktop
-Processing: remove watermark, remove LOGO, remove text, remove brand identification
-Aspect Ratio: 4:5
-Format: webp
-Generated at: 2026-04-22T17:10:44.894172
