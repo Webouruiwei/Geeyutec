@@ -1,0 +1,6 @@
+Product: Minimal 2-Burner Built-in Gas Cooktop
+Keyword: 2 burner built-in gas cooktop
+Processing: remove watermark, remove LOGO, remove text, remove brand identification
+Aspect Ratio: 4:5
+Format: webp
+Generated at: 2026-04-24T12:44:38.990567
