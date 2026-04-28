@@ -24,7 +24,7 @@ git config user.email "hermes@localhost"
 
 # Add changes
 git add loblich-smeg-website/products.html
-git add images/products/
+git add loblich-smeg-website/images/products/
 
 # Commit
 git commit -m "Auto update: Add new GasCooktop product $(date +'%Y-%m-%d %H:%M')"

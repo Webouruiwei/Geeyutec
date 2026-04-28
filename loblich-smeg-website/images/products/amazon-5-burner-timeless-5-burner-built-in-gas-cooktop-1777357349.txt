@@ -1,0 +1,15 @@
+{
+  "keyword": "5 burner built-in gas cooktop",
+  "timestamp": 1777357349,
+  "product_url": "https://www.amazon.com/VEVOR-Gas-Cooktop-Burners-Thermocouple/dp/B0CLGRVB6J/",
+  "title": "VEVOR 30-inch Gas Cooktop, 5 Burners Built-in Gas Stove Top, Max 12250BTU NG/LPG Convertible Stainless Steel Cooktops, with Thermocouple Protection for Camping, RV, Apartment",
+  "main_image_url": "https://m.media-amazon.com/images/I/71HdrCgYQZL._AC_SX342_SY445_QL70_ML2_.jpg",
+  "bullet_points": [
+    "Powerful plus Efficient: VEVOR 30\" built-in gas cooktop features 5 burners with different power levels: 3750BTU, 2 x 6400BTU, 10200BTU, and 12250BTU. 12250BTU maximum power and 52% higher thermal efficiency ensure efficient and fast heating. Enjoy a delightful cooking experience, whether for simmering or boiling.",
+    "Creative Culinary Freedom: With 5 powerful burners working in harmony, you can simultaneously fry, simmer, steam, boil, and melt a variety of culinary delights. From sizzling stir-fries, healthy steamed dishes to comforting soups, our gas stove top unleashes your creativity.",
+    "Auto Shutdown Safety: Our natural gas hob has a built-in thermocouple flameout failure system for high safety. When the top needle inside the stove to detect a flame, it automatically shuts off the gas supply, preventing leaks and ensuring your family's safety during cooking.",
+    "Built to Last: Our gas stove cook top features a stainless steel cooktop, with high wear resistance, and corrosion resistance. Durable cast iron stove brackets ensure a stable structure. In addition, if the burner flame burns abnormally during use, please close the valve body. Then, reposition the fire cover to ensure it is properly aligned before reigniting. If there is any spillage of soup or other debris, please clean it up in time before use. Avoid burner rust problems!",
+    "Versatile Compatibility: Our propane cooktop offers adaptability with LPG/NG convertible nozzles, enabling easy connection to either gas or natural gas supply. Its standard 28.7x18.5xR0.8-inch opening size ensures a perfect fit for most kitchen installations, offering versatile options for various setups."
+  ],
+  "specs": {}
+}
